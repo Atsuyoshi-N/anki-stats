@@ -92,14 +92,20 @@ async function buildDailyStats(deckNames: string[]): Promise<DailyStats[]> {
 
   // Fetch cardReviews for each deck (parent + children) and aggregate
   for (const deck of deckNames) {
-    const rows = await invoke<[number, number, number, number, number, number, number, number][]>(
+    // cardReviews returns: [id, cid, usn, ease, ivl, lastIvl, factor, time, type]
+    //   id: review timestamp (ms), ease: 1=again/2=hard/3=good/4=easy, time: duration (ms)
+    const rows = await invoke<number[][]>(
       "cardReviews",
       { deck, startID: cutoffMs }
     );
 
-    for (const [id, , ease, , , , timeMs] of rows) {
+    for (const row of rows) {
+      const id = row[0];       // review timestamp (ms since epoch)
+      const ease = row[3];     // 1=again, 2=hard, 3=good, 4=easy
+      const timeMs = row[7];   // review duration in ms
       if (timeMs <= 0) continue;
-      const dateStr = epochDayToDateString(Math.floor(id / 86400000));
+      // Convert review timestamp to local date string
+      const dateStr = new Date(id).toLocaleDateString("sv-SE"); // "YYYY-MM-DD" in local tz
       if (!dailyMap[dateStr]) dailyMap[dateStr] = { reviews: 0, studyTimeMs: 0, correct: 0 };
       dailyMap[dateStr].reviews++;
       dailyMap[dateStr].studyTimeMs += timeMs;
