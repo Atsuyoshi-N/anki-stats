@@ -24,6 +24,13 @@ const COLORS = {
   suspended: "#94a3b8",
 };
 
+function isActiveThisWeek(deck: DeckData): boolean {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  const cutoffStr = cutoff.toISOString().split("T")[0];
+  return deck.dailyStats.some((s) => s.date >= cutoffStr && s.reviews > 0);
+}
+
 export default function DeckOverview({ decks }: Props) {
   const totals = decks.reduce(
     (acc, d) => ({
@@ -82,13 +89,20 @@ export default function DeckOverview({ decks }: Props) {
           <tbody>
             {decks.map((d) => (
               <tr key={d.name} className="border-b border-gray-100 hover:bg-gray-50">
-                <td className="py-2 pr-4 font-medium max-w-[200px] truncate" title={d.name}>
-                  <Link
-                    href={`/decks/${d.slug}/`}
-                    className="text-blue-600 hover:underline"
-                  >
-                    {d.name}
-                  </Link>
+                <td className="py-2 pr-4 font-medium max-w-[240px]" title={d.name}>
+                  <div className="flex items-center gap-2">
+                    <Link
+                      href={`/decks/${d.slug}/`}
+                      className="text-blue-600 hover:underline truncate"
+                    >
+                      {d.name}
+                    </Link>
+                    {isActiveThisWeek(d) && (
+                      <span className="shrink-0 text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-green-100 text-green-700">
+                        学習中
+                      </span>
+                    )}
+                  </div>
                 </td>
                 <td className="py-2 px-3 text-right text-blue-500">{d.stats.new.toLocaleString()}</td>
                 <td className="py-2 px-3 text-right text-orange-400">{d.stats.learning.toLocaleString()}</td>
