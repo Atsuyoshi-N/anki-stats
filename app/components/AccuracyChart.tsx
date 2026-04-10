@@ -112,13 +112,13 @@ export default function AccuracyChart({ decks }: Props) {
             domain={[0, 100]}
           />
           <Tooltip
-            contentStyle={{ borderRadius: 8, fontSize: 12 }}
+            contentStyle={{ borderRadius: 8, fontSize: 12, backgroundColor: "#fff" }}
             formatter={(value, name) => {
               const v = value as number | null | undefined;
               return v != null ? [`${v}%`, String(name)] : ["データなし", String(name)];
             }}
           />
-          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
           {decks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             return (

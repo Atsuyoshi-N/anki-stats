@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { AnkiData, DeckData, DailyStats, MaturityBucket } from "../types/anki";
+import type { AnkiData, DeckData, DailyStats, MaturityBucket, ChildDeckData } from "../types/anki";
 
 const ANKI_CONNECT_URL = "http://localhost:8765";
 
@@ -15,26 +15,13 @@ async function invoke<T>(action: string, params: Record<string, unknown> = {}): 
   return json.result;
 }
 
-// AnkiConnect cardReviews returns: [usn, ease, ivl, lastIvl, factor, time, type][]
-type ReviewEntry = [number, number, number, number, number, number, number];
-
-// AnkiConnect cardsInfo card type
 interface CardInfo {
   cardId: number;
   interval: number;
-  type: number;   // 0=new, 1=learn, 2=review, 3=relearn
-  queue: number;  // -1=suspended, 0=new, 1=learn, 2=review, 3=dayLearn, 4=preview
+  type: number;
+  queue: number;
   reps: number;
   lapses: number;
-}
-
-function daysSinceEpoch(date: Date): number {
-  return Math.floor(date.getTime() / 86400000);
-}
-
-function epochDayToDateString(days: number): string {
-  const d = new Date(days * 86400000);
-  return d.toISOString().split("T")[0];
 }
 
 function getMaturityBucket(interval: number): string {
@@ -49,11 +36,44 @@ function getMaturityBucket(interval: number): string {
 
 const BUCKET_ORDER = ["unseen", "0", "1-7", "8-21", "22-90", "91-365", "365+"];
 
+function toSlug(deckName: string): string {
+  return encodeURIComponent(deckName.replace(/ /g, "_"));
+}
+
+async function fetchReviewRows(deckName: string): Promise<number[][]> {
+  const cutoffMs = Date.now() - 365 * 86400000;
+  return invoke<number[][]>("cardReviews", { deck: deckName, startID: cutoffMs });
+}
+
+function aggregateDaily(rows: number[][]): DailyStats[] {
+  const dailyMap: Record<string, { reviews: number; studyTimeMs: number; correct: number }> = {};
+
+  for (const row of rows) {
+    const id = row[0];
+    const ease = row[3];
+    const timeMs = row[7];
+    if (timeMs <= 0) continue;
+    const dateStr = new Date(id).toLocaleDateString("sv-SE");
+    if (!dailyMap[dateStr]) dailyMap[dateStr] = { reviews: 0, studyTimeMs: 0, correct: 0 };
+    dailyMap[dateStr].reviews++;
+    dailyMap[dateStr].studyTimeMs += timeMs;
+    if (ease >= 2) dailyMap[dateStr].correct++;
+  }
+
+  return Object.entries(dailyMap)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, d]) => ({
+      date,
+      reviews: d.reviews,
+      studyTimeMs: d.studyTimeMs,
+      correctRate: d.reviews > 0 ? d.correct / d.reviews : 0,
+    }));
+}
+
 async function fetchDeckData(deckName: string, allDeckNames: string[]): Promise<DeckData> {
   // Card IDs in deck (findCards with deck:"Parent" includes child decks)
   const cardIds = await invoke<number[]>("findCards", { query: `deck:"${deckName}"` });
 
-  // Card details
   const cards = cardIds.length > 0
     ? await invoke<CardInfo[]>("cardsInfo", { cards: cardIds })
     : [];
@@ -77,58 +97,66 @@ async function fetchDeckData(deckName: string, allDeckNames: string[]): Promise<
     .filter((r) => bucketMap[r] !== undefined)
     .map((r) => ({ range: r, count: bucketMap[r] }));
 
-  // Collect this deck + all child decks for review history
-  const relatedDecks = allDeckNames.filter(
+  // Collect child deck names (direct children only: "Parent::Child" but not "Parent::Child::Grandchild")
+  const childDeckNames = allDeckNames.filter(
+    (name) => name.startsWith(deckName + "::") && !name.slice(deckName.length + 2).includes("::")
+  );
+
+  // All related decks for total daily stats
+  const allRelated = allDeckNames.filter(
     (name) => name === deckName || name.startsWith(deckName + "::")
   );
-  const dailyStats = await buildDailyStats(relatedDecks);
 
-  return { name: deckName, stats, maturityDistribution, dailyStats };
-}
+  // Fetch review rows for all related decks
+  const allRows: number[][] = [];
+  for (const dk of allRelated) {
+    const rows = await fetchReviewRows(dk);
+    allRows.push(...rows);
+  }
+  const dailyStats = aggregateDaily(allRows);
 
-async function buildDailyStats(deckNames: string[]): Promise<DailyStats[]> {
-  const cutoffMs = Date.now() - 365 * 86400000;
-  const dailyMap: Record<string, { reviews: number; studyTimeMs: number; correct: number }> = {};
+  // Build per-child daily stats (each child includes its own sub-children)
+  const children: ChildDeckData[] = [];
+  if (childDeckNames.length > 0) {
+    // Reviews directly in parent deck (not in any child)
+    const parentRows = await fetchReviewRows(deckName);
+    if (parentRows.length > 0) {
+      children.push({
+        name: deckName + " (直接)",
+        dailyStats: aggregateDaily(parentRows),
+      });
+    }
 
-  // Fetch cardReviews for each deck (parent + children) and aggregate
-  for (const deck of deckNames) {
-    // cardReviews returns: [id, cid, usn, ease, ivl, lastIvl, factor, time, type]
-    //   id: review timestamp (ms), ease: 1=again/2=hard/3=good/4=easy, time: duration (ms)
-    const rows = await invoke<number[][]>(
-      "cardReviews",
-      { deck, startID: cutoffMs }
-    );
-
-    for (const row of rows) {
-      const id = row[0];       // review timestamp (ms since epoch)
-      const ease = row[3];     // 1=again, 2=hard, 3=good, 4=easy
-      const timeMs = row[7];   // review duration in ms
-      if (timeMs <= 0) continue;
-      // Convert review timestamp to local date string
-      const dateStr = new Date(id).toLocaleDateString("sv-SE"); // "YYYY-MM-DD" in local tz
-      if (!dailyMap[dateStr]) dailyMap[dateStr] = { reviews: 0, studyTimeMs: 0, correct: 0 };
-      dailyMap[dateStr].reviews++;
-      dailyMap[dateStr].studyTimeMs += timeMs;
-      if (ease >= 2) dailyMap[dateStr].correct++;
+    for (const childName of childDeckNames) {
+      const childRelated = allDeckNames.filter(
+        (name) => name === childName || name.startsWith(childName + "::")
+      );
+      const childRows: number[][] = [];
+      for (const dk of childRelated) {
+        const rows = await fetchReviewRows(dk);
+        childRows.push(...rows);
+      }
+      const childDaily = aggregateDaily(childRows);
+      if (childDaily.length > 0) {
+        children.push({ name: childName, dailyStats: childDaily });
+      }
     }
   }
 
-  return Object.entries(dailyMap)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([date, d]) => ({
-      date,
-      reviews: d.reviews,
-      studyTimeMs: d.studyTimeMs,
-      correctRate: d.reviews > 0 ? d.correct / d.reviews : 0,
-    }));
+  return {
+    name: deckName,
+    slug: toSlug(deckName),
+    stats,
+    maturityDistribution,
+    dailyStats,
+    children,
+  };
 }
 
 async function main() {
   console.log("Connecting to AnkiConnect...");
 
   const allDeckNames = await invoke<string[]>("deckNames");
-  // Only fetch top-level decks (no "::" separator).
-  // Anki's findCards with deck:"Parent" includes all child decks automatically.
   const topLevelDecks = allDeckNames.filter(
     (name) => name !== "Default" && !name.includes("::")
   );

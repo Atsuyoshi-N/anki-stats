@@ -18,11 +18,18 @@ export interface DeckStats {
   total: number;
 }
 
+export interface ChildDeckData {
+  name: string;
+  dailyStats: DailyStats[];
+}
+
 export interface DeckData {
   name: string;
+  slug: string;
   stats: DeckStats;
   maturityDistribution: MaturityBucket[];
   dailyStats: DailyStats[];
+  children: ChildDeckData[];
 }
 
 export interface AnkiData {

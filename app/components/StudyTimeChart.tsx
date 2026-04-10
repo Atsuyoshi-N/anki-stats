@@ -11,6 +11,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import ChartTooltip from "./ChartTooltip";
 
 interface Props {
   decks: DeckData[];
@@ -86,11 +87,8 @@ export default function StudyTimeChart({ decks }: Props) {
             interval="preserveStartEnd"
           />
           <YAxis tick={{ fontSize: 11 }} unit="分" />
-          <Tooltip
-            contentStyle={{ borderRadius: 8, fontSize: 12 }}
-            formatter={(value, name) => [`${Number(value)} 分`, String(name)]}
-          />
-          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Tooltip content={(props) => <ChartTooltip {...props} unit=" 分" />} />
+          <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
           {decks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             const color = DECK_COLORS[i % DECK_COLORS.length];

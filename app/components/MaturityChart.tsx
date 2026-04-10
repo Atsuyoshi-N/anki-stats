@@ -10,6 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import ChartTooltip from "./ChartTooltip";
 
 interface Props {
   decks: DeckData[];
@@ -56,11 +57,8 @@ export default function MaturityChart({ decks }: Props) {
         <BarChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
           <XAxis dataKey="bucket" tick={{ fontSize: 11 }} />
           <YAxis tick={{ fontSize: 11 }} />
-          <Tooltip
-            contentStyle={{ borderRadius: 8, fontSize: 12 }}
-            formatter={(value, name) => [Number(value).toLocaleString() + " 枚", String(name)]}
-          />
-          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Tooltip content={(props) => <ChartTooltip {...props} unit=" 枚" />} />
+          <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
           {decks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             return (

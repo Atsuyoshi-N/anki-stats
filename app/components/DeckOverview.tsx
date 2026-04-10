@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { DeckData } from "@/types/anki";
 import {
   BarChart,
@@ -10,6 +11,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import ChartTooltip from "./ChartTooltip";
 
 interface Props {
   decks: DeckData[];
@@ -80,8 +82,13 @@ export default function DeckOverview({ decks }: Props) {
           <tbody>
             {decks.map((d) => (
               <tr key={d.name} className="border-b border-gray-100 hover:bg-gray-50">
-                <td className="py-2 pr-4 font-medium text-gray-700 max-w-[200px] truncate" title={d.name}>
-                  {d.name}
+                <td className="py-2 pr-4 font-medium max-w-[200px] truncate" title={d.name}>
+                  <Link
+                    href={`/decks/${d.slug}/`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {d.name}
+                  </Link>
                 </td>
                 <td className="py-2 px-3 text-right text-blue-500">{d.stats.new.toLocaleString()}</td>
                 <td className="py-2 px-3 text-right text-orange-400">{d.stats.learning.toLocaleString()}</td>
@@ -107,11 +114,8 @@ export default function DeckOverview({ decks }: Props) {
         <BarChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }} />
-          <Tooltip
-            formatter={(value, name) => [Number(value).toLocaleString(), String(name)]}
-            contentStyle={{ borderRadius: 8, fontSize: 12 }}
-          />
-          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Tooltip content={(props) => <ChartTooltip {...props} unit=" 枚" />} />
+          <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
           <Bar dataKey="新規" stackId="a" fill={COLORS.new} />
           <Bar dataKey="学習中" stackId="a" fill={COLORS.learning} />
           <Bar dataKey="復習" stackId="a" fill={COLORS.review} />
