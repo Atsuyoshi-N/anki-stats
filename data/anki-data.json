@@ -1,0 +1,2283 @@
+{
+  "fetchedAt": "2026-04-10T03:52:49.724Z",
+  "decks": [
+    {
+      "name": "Java Google Style Guide",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 10,
+        "suspended": 0,
+        "total": 10
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 10
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "Java言語で学ぶデザインパターン",
+      "stats": {
+        "new": 0,
+        "learning": 23,
+        "review": 0,
+        "suspended": 0,
+        "total": 23
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 23
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "WSET_level2_quiz",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 100,
+        "suspended": 0,
+        "total": 100
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 96
+        },
+        {
+          "range": "8-21",
+          "count": 4
+        }
+      ],
+      "dailyStats": [
+        {
+          "date": "2026-03-30",
+          "reviews": 20,
+          "studyTimeMs": 50000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-31",
+          "reviews": 49,
+          "studyTimeMs": 118600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-01",
+          "reviews": 57,
+          "studyTimeMs": 136350,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-02",
+          "reviews": 67,
+          "studyTimeMs": 157200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-03",
+          "reviews": 74,
+          "studyTimeMs": 174250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-04",
+          "reviews": 100,
+          "studyTimeMs": 218950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-06",
+          "reviews": 35,
+          "studyTimeMs": 73100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-07",
+          "reviews": 74,
+          "studyTimeMs": 150450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-08",
+          "reviews": 1,
+          "studyTimeMs": 2300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-09",
+          "reviews": 29,
+          "studyTimeMs": 55850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-10",
+          "reviews": 23,
+          "studyTimeMs": 43600,
+          "correctRate": 1
+        }
+      ]
+    },
+    {
+      "name": "どんどん話すための瞬間英作文",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 790,
+        "suspended": 0,
+        "total": 790
+      },
+      "maturityDistribution": [
+        {
+          "range": "8-21",
+          "count": 1
+        },
+        {
+          "range": "22-90",
+          "count": 33
+        },
+        {
+          "range": "91-365",
+          "count": 667
+        },
+        {
+          "range": "365+",
+          "count": 89
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "ふつうのコンパイラをつくろう",
+      "stats": {
+        "new": 36,
+        "learning": 0,
+        "review": 0,
+        "suspended": 0,
+        "total": 36
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 36
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "やさしく学べる離散数学",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 55,
+        "suspended": 0,
+        "total": 55
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 37
+        },
+        {
+          "range": "8-21",
+          "count": 17
+        },
+        {
+          "range": "365+",
+          "count": 1
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "ビッグデータを支える技術",
+      "stats": {
+        "new": 19,
+        "learning": 0,
+        "review": 0,
+        "suspended": 0,
+        "total": 19
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 19
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "リーダブルコード",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 24,
+        "suspended": 0,
+        "total": 24
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 23
+        },
+        {
+          "range": "8-21",
+          "count": 1
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "ワインエキスパート",
+      "stats": {
+        "new": 1920,
+        "learning": 17,
+        "review": 172,
+        "suspended": 0,
+        "total": 2109
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 1936
+        },
+        {
+          "range": "1-7",
+          "count": 78
+        },
+        {
+          "range": "8-21",
+          "count": 63
+        },
+        {
+          "range": "22-90",
+          "count": 32
+        }
+      ],
+      "dailyStats": [
+        {
+          "date": "2025-10-25",
+          "reviews": 1,
+          "studyTimeMs": 2300,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-03",
+          "reviews": 184,
+          "studyTimeMs": 402800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-26",
+          "reviews": 147,
+          "studyTimeMs": 304050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-27",
+          "reviews": 49,
+          "studyTimeMs": 92250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-29",
+          "reviews": 63,
+          "studyTimeMs": 115700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-30",
+          "reviews": 32,
+          "studyTimeMs": 57800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-31",
+          "reviews": 41,
+          "studyTimeMs": 76850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-01",
+          "reviews": 28,
+          "studyTimeMs": 48600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-02",
+          "reviews": 23,
+          "studyTimeMs": 36800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-03",
+          "reviews": 34,
+          "studyTimeMs": 53900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-05",
+          "reviews": 46,
+          "studyTimeMs": 72400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-07",
+          "reviews": 48,
+          "studyTimeMs": 74000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-08",
+          "reviews": 15,
+          "studyTimeMs": 23150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-09",
+          "reviews": 21,
+          "studyTimeMs": 31500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-10",
+          "reviews": 13,
+          "studyTimeMs": 19400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-11",
+          "reviews": 14,
+          "studyTimeMs": 22950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-12",
+          "reviews": 16,
+          "studyTimeMs": 25650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-14",
+          "reviews": 13,
+          "studyTimeMs": 18000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-15",
+          "reviews": 13,
+          "studyTimeMs": 19300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-16",
+          "reviews": 27,
+          "studyTimeMs": 39950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-18",
+          "reviews": 23,
+          "studyTimeMs": 34450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-20",
+          "reviews": 14,
+          "studyTimeMs": 20750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-21",
+          "reviews": 13,
+          "studyTimeMs": 18250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-22",
+          "reviews": 10,
+          "studyTimeMs": 14400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-23",
+          "reviews": 11,
+          "studyTimeMs": 16050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-24",
+          "reviews": 13,
+          "studyTimeMs": 18600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-25",
+          "reviews": 15,
+          "studyTimeMs": 21300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-26",
+          "reviews": 11,
+          "studyTimeMs": 15050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-27",
+          "reviews": 10,
+          "studyTimeMs": 13400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-28",
+          "reviews": 14,
+          "studyTimeMs": 19700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-01",
+          "reviews": 16,
+          "studyTimeMs": 22750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-02",
+          "reviews": 11,
+          "studyTimeMs": 15300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-03",
+          "reviews": 6,
+          "studyTimeMs": 8800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-04",
+          "reviews": 7,
+          "studyTimeMs": 9550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-05",
+          "reviews": 8,
+          "studyTimeMs": 10850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-06",
+          "reviews": 8,
+          "studyTimeMs": 11800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-07",
+          "reviews": 10,
+          "studyTimeMs": 14250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-08",
+          "reviews": 10,
+          "studyTimeMs": 13900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-09",
+          "reviews": 7,
+          "studyTimeMs": 9100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-10",
+          "reviews": 10,
+          "studyTimeMs": 13050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-11",
+          "reviews": 8,
+          "studyTimeMs": 11000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-12",
+          "reviews": 11,
+          "studyTimeMs": 14400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-13",
+          "reviews": 6,
+          "studyTimeMs": 8150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-14",
+          "reviews": 12,
+          "studyTimeMs": 16200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-15",
+          "reviews": 3,
+          "studyTimeMs": 4200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-16",
+          "reviews": 10,
+          "studyTimeMs": 13400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-17",
+          "reviews": 7,
+          "studyTimeMs": 9850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-18",
+          "reviews": 7,
+          "studyTimeMs": 9600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-19",
+          "reviews": 12,
+          "studyTimeMs": 16450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-21",
+          "reviews": 8,
+          "studyTimeMs": 10700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-22",
+          "reviews": 7,
+          "studyTimeMs": 9500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-23",
+          "reviews": 9,
+          "studyTimeMs": 11700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-24",
+          "reviews": 6,
+          "studyTimeMs": 7800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-25",
+          "reviews": 15,
+          "studyTimeMs": 20300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-26",
+          "reviews": 4,
+          "studyTimeMs": 5200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-28",
+          "reviews": 16,
+          "studyTimeMs": 21250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-30",
+          "reviews": 6,
+          "studyTimeMs": 7950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-31",
+          "reviews": 3,
+          "studyTimeMs": 3900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-01",
+          "reviews": 7,
+          "studyTimeMs": 9250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-02",
+          "reviews": 6,
+          "studyTimeMs": 7800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-03",
+          "reviews": 4,
+          "studyTimeMs": 5350,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-04",
+          "reviews": 21,
+          "studyTimeMs": 27450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-05",
+          "reviews": 1,
+          "studyTimeMs": 1300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-06",
+          "reviews": 9,
+          "studyTimeMs": 11950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-07",
+          "reviews": 7,
+          "studyTimeMs": 9550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-08",
+          "reviews": 7,
+          "studyTimeMs": 9100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-09",
+          "reviews": 6,
+          "studyTimeMs": 8100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-10",
+          "reviews": 8,
+          "studyTimeMs": 10400,
+          "correctRate": 1
+        }
+      ]
+    },
+    {
+      "name": "ワインエキスパート_notebooklm",
+      "stats": {
+        "new": 1842,
+        "learning": 0,
+        "review": 0,
+        "suspended": 0,
+        "total": 1842
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 1842
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "ワインエキスパート_問題集ミス周回用",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 354,
+        "suspended": 0,
+        "total": 354
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 10
+        },
+        {
+          "range": "8-21",
+          "count": 68
+        },
+        {
+          "range": "22-90",
+          "count": 271
+        },
+        {
+          "range": "91-365",
+          "count": 5
+        }
+      ],
+      "dailyStats": [
+        {
+          "date": "2025-10-25",
+          "reviews": 61,
+          "studyTimeMs": 152500,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-10-30",
+          "reviews": 165,
+          "studyTimeMs": 407150,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-10-31",
+          "reviews": 219,
+          "studyTimeMs": 538300,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-02",
+          "reviews": 199,
+          "studyTimeMs": 476250,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-03",
+          "reviews": 360,
+          "studyTimeMs": 834150,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-05",
+          "reviews": 249,
+          "studyTimeMs": 548850,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-06",
+          "reviews": 95,
+          "studyTimeMs": 209100,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-07",
+          "reviews": 90,
+          "studyTimeMs": 187350,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-09",
+          "reviews": 78,
+          "studyTimeMs": 155250,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-10",
+          "reviews": 64,
+          "studyTimeMs": 130350,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-11",
+          "reviews": 71,
+          "studyTimeMs": 143700,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-12",
+          "reviews": 83,
+          "studyTimeMs": 164150,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-13",
+          "reviews": 66,
+          "studyTimeMs": 125850,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-14",
+          "reviews": 131,
+          "studyTimeMs": 241600,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-15",
+          "reviews": 61,
+          "studyTimeMs": 111350,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-18",
+          "reviews": 156,
+          "studyTimeMs": 293900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-20",
+          "reviews": 88,
+          "studyTimeMs": 164950,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-22",
+          "reviews": 47,
+          "studyTimeMs": 85200,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-23",
+          "reviews": 42,
+          "studyTimeMs": 77750,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-24",
+          "reviews": 74,
+          "studyTimeMs": 129800,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-26",
+          "reviews": 36,
+          "studyTimeMs": 62200,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-03",
+          "reviews": 209,
+          "studyTimeMs": 365900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-05",
+          "reviews": 73,
+          "studyTimeMs": 121350,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-07",
+          "reviews": 35,
+          "studyTimeMs": 59100,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-15",
+          "reviews": 196,
+          "studyTimeMs": 332550,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-17",
+          "reviews": 67,
+          "studyTimeMs": 110200,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-18",
+          "reviews": 24,
+          "studyTimeMs": 40300,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-19",
+          "reviews": 33,
+          "studyTimeMs": 50200,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-21",
+          "reviews": 31,
+          "studyTimeMs": 50900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-22",
+          "reviews": 28,
+          "studyTimeMs": 47550,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-23",
+          "reviews": 45,
+          "studyTimeMs": 70900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-25",
+          "reviews": 49,
+          "studyTimeMs": 76000,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-30",
+          "reviews": 123,
+          "studyTimeMs": 186750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-01",
+          "reviews": 58,
+          "studyTimeMs": 87650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-03",
+          "reviews": 33,
+          "studyTimeMs": 50850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-04",
+          "reviews": 28,
+          "studyTimeMs": 43250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-05",
+          "reviews": 25,
+          "studyTimeMs": 37250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-06",
+          "reviews": 29,
+          "studyTimeMs": 45300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-07",
+          "reviews": 24,
+          "studyTimeMs": 36250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-08",
+          "reviews": 29,
+          "studyTimeMs": 44850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-09",
+          "reviews": 27,
+          "studyTimeMs": 43600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-10",
+          "reviews": 29,
+          "studyTimeMs": 45900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-11",
+          "reviews": 35,
+          "studyTimeMs": 53600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-12",
+          "reviews": 23,
+          "studyTimeMs": 33300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-13",
+          "reviews": 16,
+          "studyTimeMs": 24900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-14",
+          "reviews": 24,
+          "studyTimeMs": 37800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-15",
+          "reviews": 52,
+          "studyTimeMs": 79100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-16",
+          "reviews": 22,
+          "studyTimeMs": 33600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-18",
+          "reviews": 22,
+          "studyTimeMs": 33800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-19",
+          "reviews": 55,
+          "studyTimeMs": 81400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-20",
+          "reviews": 22,
+          "studyTimeMs": 33900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-22",
+          "reviews": 47,
+          "studyTimeMs": 67750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-23",
+          "reviews": 28,
+          "studyTimeMs": 41100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-24",
+          "reviews": 24,
+          "studyTimeMs": 34000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-25",
+          "reviews": 19,
+          "studyTimeMs": 30500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-26",
+          "reviews": 32,
+          "studyTimeMs": 45700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-27",
+          "reviews": 28,
+          "studyTimeMs": 41200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-29",
+          "reviews": 40,
+          "studyTimeMs": 61650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-30",
+          "reviews": 21,
+          "studyTimeMs": 28400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-31",
+          "reviews": 26,
+          "studyTimeMs": 37950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-01",
+          "reviews": 22,
+          "studyTimeMs": 31950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-02",
+          "reviews": 18,
+          "studyTimeMs": 27300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-03",
+          "reviews": 21,
+          "studyTimeMs": 31500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-05",
+          "reviews": 40,
+          "studyTimeMs": 57400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-07",
+          "reviews": 37,
+          "studyTimeMs": 55900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-08",
+          "reviews": 22,
+          "studyTimeMs": 31950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-09",
+          "reviews": 20,
+          "studyTimeMs": 28200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-10",
+          "reviews": 21,
+          "studyTimeMs": 28350,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-11",
+          "reviews": 17,
+          "studyTimeMs": 24050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-12",
+          "reviews": 23,
+          "studyTimeMs": 33700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-14",
+          "reviews": 17,
+          "studyTimeMs": 24100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-15",
+          "reviews": 20,
+          "studyTimeMs": 29000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-16",
+          "reviews": 40,
+          "studyTimeMs": 57600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-18",
+          "reviews": 30,
+          "studyTimeMs": 43100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-20",
+          "reviews": 21,
+          "studyTimeMs": 29350,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-21",
+          "reviews": 23,
+          "studyTimeMs": 32700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-22",
+          "reviews": 32,
+          "studyTimeMs": 45050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-23",
+          "reviews": 22,
+          "studyTimeMs": 31900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-24",
+          "reviews": 16,
+          "studyTimeMs": 22900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-25",
+          "reviews": 17,
+          "studyTimeMs": 24900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-27",
+          "reviews": 29,
+          "studyTimeMs": 43050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-28",
+          "reviews": 21,
+          "studyTimeMs": 30800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-01",
+          "reviews": 19,
+          "studyTimeMs": 26250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-02",
+          "reviews": 23,
+          "studyTimeMs": 32700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-03",
+          "reviews": 22,
+          "studyTimeMs": 31600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-04",
+          "reviews": 19,
+          "studyTimeMs": 27050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-05",
+          "reviews": 17,
+          "studyTimeMs": 24100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-06",
+          "reviews": 23,
+          "studyTimeMs": 32800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-07",
+          "reviews": 14,
+          "studyTimeMs": 19000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-08",
+          "reviews": 21,
+          "studyTimeMs": 28600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-09",
+          "reviews": 23,
+          "studyTimeMs": 31900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-10",
+          "reviews": 16,
+          "studyTimeMs": 21050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-11",
+          "reviews": 15,
+          "studyTimeMs": 19900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-12",
+          "reviews": 16,
+          "studyTimeMs": 22100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-13",
+          "reviews": 16,
+          "studyTimeMs": 22800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-14",
+          "reviews": 22,
+          "studyTimeMs": 30800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-15",
+          "reviews": 16,
+          "studyTimeMs": 22650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-16",
+          "reviews": 15,
+          "studyTimeMs": 21400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-17",
+          "reviews": 26,
+          "studyTimeMs": 36400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-18",
+          "reviews": 26,
+          "studyTimeMs": 35200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-19",
+          "reviews": 34,
+          "studyTimeMs": 47600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-21",
+          "reviews": 13,
+          "studyTimeMs": 18450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-22",
+          "reviews": 11,
+          "studyTimeMs": 16200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-23",
+          "reviews": 15,
+          "studyTimeMs": 20800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-24",
+          "reviews": 23,
+          "studyTimeMs": 31050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-25",
+          "reviews": 39,
+          "studyTimeMs": 55000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-26",
+          "reviews": 11,
+          "studyTimeMs": 15300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-28",
+          "reviews": 32,
+          "studyTimeMs": 43400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-31",
+          "reviews": 37,
+          "studyTimeMs": 51600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-01",
+          "reviews": 21,
+          "studyTimeMs": 29500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-02",
+          "reviews": 16,
+          "studyTimeMs": 22450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-03",
+          "reviews": 16,
+          "studyTimeMs": 21850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-04",
+          "reviews": 17,
+          "studyTimeMs": 22400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-05",
+          "reviews": 12,
+          "studyTimeMs": 16900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-06",
+          "reviews": 19,
+          "studyTimeMs": 26600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-07",
+          "reviews": 14,
+          "studyTimeMs": 18600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-08",
+          "reviews": 19,
+          "studyTimeMs": 26100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-09",
+          "reviews": 15,
+          "studyTimeMs": 19800,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-10",
+          "reviews": 13,
+          "studyTimeMs": 18500,
+          "correctRate": 1
+        }
+      ]
+    },
+    {
+      "name": "ヴィノテラステキスト",
+      "stats": {
+        "new": 979,
+        "learning": 0,
+        "review": 1721,
+        "suspended": 0,
+        "total": 2700
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 979
+        },
+        {
+          "range": "1-7",
+          "count": 534
+        },
+        {
+          "range": "8-21",
+          "count": 709
+        },
+        {
+          "range": "22-90",
+          "count": 478
+        }
+      ],
+      "dailyStats": [
+        {
+          "date": "2025-11-05",
+          "reviews": 53,
+          "studyTimeMs": 132500,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-06",
+          "reviews": 97,
+          "studyTimeMs": 227750,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-07",
+          "reviews": 46,
+          "studyTimeMs": 106300,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-08",
+          "reviews": 30,
+          "studyTimeMs": 70000,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-09",
+          "reviews": 118,
+          "studyTimeMs": 264000,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-10",
+          "reviews": 45,
+          "studyTimeMs": 97950,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-11",
+          "reviews": 43,
+          "studyTimeMs": 91100,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-12",
+          "reviews": 110,
+          "studyTimeMs": 252250,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-13",
+          "reviews": 122,
+          "studyTimeMs": 277900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-14",
+          "reviews": 113,
+          "studyTimeMs": 231950,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-15",
+          "reviews": 199,
+          "studyTimeMs": 456150,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-18",
+          "reviews": 538,
+          "studyTimeMs": 1236900,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-20",
+          "reviews": 229,
+          "studyTimeMs": 484800,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-22",
+          "reviews": 29,
+          "studyTimeMs": 53700,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-23",
+          "reviews": 177,
+          "studyTimeMs": 395800,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-24",
+          "reviews": 176,
+          "studyTimeMs": 368700,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-11-26",
+          "reviews": 100,
+          "studyTimeMs": 190000,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-07",
+          "reviews": 17,
+          "studyTimeMs": 42500,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-18",
+          "reviews": 272,
+          "studyTimeMs": 498000,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-19",
+          "reviews": 51,
+          "studyTimeMs": 79400,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-21",
+          "reviews": 15,
+          "studyTimeMs": 22650,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-22",
+          "reviews": 25,
+          "studyTimeMs": 37100,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-23",
+          "reviews": 297,
+          "studyTimeMs": 559150,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-25",
+          "reviews": 75,
+          "studyTimeMs": 147550,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-26",
+          "reviews": 63,
+          "studyTimeMs": 122250,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-30",
+          "reviews": 99,
+          "studyTimeMs": 150950,
+          "correctRate": 1
+        },
+        {
+          "date": "2025-12-31",
+          "reviews": 419,
+          "studyTimeMs": 839900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-01",
+          "reviews": 343,
+          "studyTimeMs": 709150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-02",
+          "reviews": 102,
+          "studyTimeMs": 214850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-03",
+          "reviews": 204,
+          "studyTimeMs": 419550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-04",
+          "reviews": 273,
+          "studyTimeMs": 560450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-05",
+          "reviews": 210,
+          "studyTimeMs": 403300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-06",
+          "reviews": 162,
+          "studyTimeMs": 297200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-07",
+          "reviews": 166,
+          "studyTimeMs": 302700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-08",
+          "reviews": 133,
+          "studyTimeMs": 236850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-09",
+          "reviews": 123,
+          "studyTimeMs": 205400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-10",
+          "reviews": 108,
+          "studyTimeMs": 187950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-11",
+          "reviews": 99,
+          "studyTimeMs": 162900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-12",
+          "reviews": 106,
+          "studyTimeMs": 177150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-13",
+          "reviews": 113,
+          "studyTimeMs": 187900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-14",
+          "reviews": 96,
+          "studyTimeMs": 158250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-15",
+          "reviews": 204,
+          "studyTimeMs": 326350,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-16",
+          "reviews": 104,
+          "studyTimeMs": 167100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-18",
+          "reviews": 95,
+          "studyTimeMs": 148700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-19",
+          "reviews": 162,
+          "studyTimeMs": 253500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-20",
+          "reviews": 88,
+          "studyTimeMs": 132200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-22",
+          "reviews": 143,
+          "studyTimeMs": 229450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-23",
+          "reviews": 69,
+          "studyTimeMs": 103450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-24",
+          "reviews": 76,
+          "studyTimeMs": 115100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-25",
+          "reviews": 74,
+          "studyTimeMs": 115200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-26",
+          "reviews": 63,
+          "studyTimeMs": 99850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-27",
+          "reviews": 72,
+          "studyTimeMs": 108300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-29",
+          "reviews": 130,
+          "studyTimeMs": 196400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-30",
+          "reviews": 65,
+          "studyTimeMs": 100500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-01-31",
+          "reviews": 58,
+          "studyTimeMs": 89550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-01",
+          "reviews": 56,
+          "studyTimeMs": 87050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-02",
+          "reviews": 62,
+          "studyTimeMs": 89250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-03",
+          "reviews": 59,
+          "studyTimeMs": 87500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-04",
+          "reviews": 40,
+          "studyTimeMs": 100000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-05",
+          "reviews": 228,
+          "studyTimeMs": 451650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-07",
+          "reviews": 238,
+          "studyTimeMs": 454000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-08",
+          "reviews": 142,
+          "studyTimeMs": 284600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-09",
+          "reviews": 144,
+          "studyTimeMs": 290000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-10",
+          "reviews": 121,
+          "studyTimeMs": 245950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-11",
+          "reviews": 131,
+          "studyTimeMs": 260150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-12",
+          "reviews": 138,
+          "studyTimeMs": 275700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-14",
+          "reviews": 183,
+          "studyTimeMs": 374700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-15",
+          "reviews": 91,
+          "studyTimeMs": 174550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-16",
+          "reviews": 303,
+          "studyTimeMs": 626300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-18",
+          "reviews": 422,
+          "studyTimeMs": 857200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-20",
+          "reviews": 268,
+          "studyTimeMs": 532100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-21",
+          "reviews": 283,
+          "studyTimeMs": 535000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-22",
+          "reviews": 255,
+          "studyTimeMs": 466650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-23",
+          "reviews": 217,
+          "studyTimeMs": 372000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-24",
+          "reviews": 163,
+          "studyTimeMs": 274900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-25",
+          "reviews": 145,
+          "studyTimeMs": 239050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-26",
+          "reviews": 161,
+          "studyTimeMs": 259000,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-27",
+          "reviews": 157,
+          "studyTimeMs": 259450,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-02-28",
+          "reviews": 161,
+          "studyTimeMs": 255750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-01",
+          "reviews": 134,
+          "studyTimeMs": 207900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-02",
+          "reviews": 104,
+          "studyTimeMs": 163750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-03",
+          "reviews": 126,
+          "studyTimeMs": 194150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-04",
+          "reviews": 162,
+          "studyTimeMs": 238750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-05",
+          "reviews": 131,
+          "studyTimeMs": 198950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-06",
+          "reviews": 118,
+          "studyTimeMs": 174600,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-07",
+          "reviews": 111,
+          "studyTimeMs": 172150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-08",
+          "reviews": 120,
+          "studyTimeMs": 177200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-09",
+          "reviews": 98,
+          "studyTimeMs": 140950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-10",
+          "reviews": 100,
+          "studyTimeMs": 153150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-11",
+          "reviews": 116,
+          "studyTimeMs": 173500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-12",
+          "reviews": 143,
+          "studyTimeMs": 199250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-13",
+          "reviews": 201,
+          "studyTimeMs": 328750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-14",
+          "reviews": 224,
+          "studyTimeMs": 408400,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-15",
+          "reviews": 236,
+          "studyTimeMs": 433750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-16",
+          "reviews": 240,
+          "studyTimeMs": 437900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-17",
+          "reviews": 246,
+          "studyTimeMs": 462950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-18",
+          "reviews": 279,
+          "studyTimeMs": 527700,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-19",
+          "reviews": 604,
+          "studyTimeMs": 1197150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-20",
+          "reviews": 165,
+          "studyTimeMs": 383300,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-21",
+          "reviews": 163,
+          "studyTimeMs": 264650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-22",
+          "reviews": 184,
+          "studyTimeMs": 326150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-23",
+          "reviews": 197,
+          "studyTimeMs": 363200,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-24",
+          "reviews": 155,
+          "studyTimeMs": 276500,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-25",
+          "reviews": 365,
+          "studyTimeMs": 635550,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-26",
+          "reviews": 201,
+          "studyTimeMs": 338050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-28",
+          "reviews": 296,
+          "studyTimeMs": 473100,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-29",
+          "reviews": 100,
+          "studyTimeMs": 205900,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-30",
+          "reviews": 235,
+          "studyTimeMs": 448950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-03-31",
+          "reviews": 208,
+          "studyTimeMs": 393850,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-01",
+          "reviews": 161,
+          "studyTimeMs": 283150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-02",
+          "reviews": 169,
+          "studyTimeMs": 295250,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-03",
+          "reviews": 159,
+          "studyTimeMs": 268650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-04",
+          "reviews": 144,
+          "studyTimeMs": 246050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-05",
+          "reviews": 128,
+          "studyTimeMs": 215150,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-06",
+          "reviews": 164,
+          "studyTimeMs": 301950,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-07",
+          "reviews": 276,
+          "studyTimeMs": 554650,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-08",
+          "reviews": 369,
+          "studyTimeMs": 773050,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-09",
+          "reviews": 735,
+          "studyTimeMs": 1602750,
+          "correctRate": 1
+        },
+        {
+          "date": "2026-04-10",
+          "reviews": 61,
+          "studyTimeMs": 96700,
+          "correctRate": 1
+        }
+      ]
+    },
+    {
+      "name": "世界遺産検定",
+      "stats": {
+        "new": 177,
+        "learning": 0,
+        "review": 0,
+        "suspended": 0,
+        "total": 177
+      },
+      "maturityDistribution": [
+        {
+          "range": "0",
+          "count": 177
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "金のフレーズ",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 1450,
+        "suspended": 11,
+        "total": 1461
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 15
+        },
+        {
+          "range": "8-21",
+          "count": 12
+        },
+        {
+          "range": "22-90",
+          "count": 134
+        },
+        {
+          "range": "91-365",
+          "count": 563
+        },
+        {
+          "range": "365+",
+          "count": 737
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "鉄壁",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 4256,
+        "suspended": 5,
+        "total": 4261
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 29
+        },
+        {
+          "range": "8-21",
+          "count": 89
+        },
+        {
+          "range": "22-90",
+          "count": 499
+        },
+        {
+          "range": "91-365",
+          "count": 2341
+        },
+        {
+          "range": "365+",
+          "count": 1303
+        }
+      ],
+      "dailyStats": []
+    },
+    {
+      "name": "高校数学の美しい物語",
+      "stats": {
+        "new": 0,
+        "learning": 0,
+        "review": 27,
+        "suspended": 0,
+        "total": 27
+      },
+      "maturityDistribution": [
+        {
+          "range": "1-7",
+          "count": 20
+        },
+        {
+          "range": "8-21",
+          "count": 7
+        }
+      ],
+      "dailyStats": []
+    }
+  ]
+}
