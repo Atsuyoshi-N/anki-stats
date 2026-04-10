@@ -114,6 +114,8 @@ export default function DeckDetailCharts({ deck }: { deck: DeckData }) {
   // --- Daily Reviews ---
   const reviewCutoff = reviewRange === "all" ? "" : subtractDays(Number(reviewRange));
   const reviewDates = collectDates(series, reviewCutoff);
+  const totalReviews = series.reduce((sum, s) =>
+    sum + s.dailyStats.filter((d) => !reviewCutoff || d.date >= reviewCutoff).reduce((s, d) => s + d.reviews, 0), 0);
   const reviewData = reviewDates.map((date) => {
     const row: Record<string, string | number> = { date };
     for (const s of series) {
@@ -126,6 +128,8 @@ export default function DeckDetailCharts({ deck }: { deck: DeckData }) {
   // --- Study Time ---
   const timeCutoff = timeRange === "all" ? "" : subtractDays(Number(timeRange));
   const timeDates = collectDates(series, timeCutoff);
+  const totalMin = Math.round(series.reduce((sum, s) =>
+    sum + s.dailyStats.filter((d) => !timeCutoff || d.date >= timeCutoff).reduce((s, d) => s + d.studyTimeMs, 0), 0) / 60000);
   const timeData = timeDates.map((date) => {
     const row: Record<string, string | number> = { date };
     for (const s of series) {
@@ -155,10 +159,15 @@ export default function DeckDetailCharts({ deck }: { deck: DeckData }) {
       {/* Daily Reviews */}
       <section className="bg-white rounded-2xl shadow p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-800">
-            日別学習枚数
-            {hasChildren && <span className="text-sm text-gray-400 font-normal ml-2">(子デッキ別)</span>}
-          </h2>
+          <div>
+            <h2 className="text-lg font-semibold text-gray-800">
+              日別学習枚数
+              {hasChildren && <span className="text-sm text-gray-400 font-normal ml-2">(子デッキ別)</span>}
+            </h2>
+            <p className="text-sm text-gray-400 mt-0.5">
+              合計 <span className="font-semibold text-gray-700">{totalReviews.toLocaleString()} 枚</span>
+            </p>
+          </div>
           <RangeSelector range={reviewRange} onChange={setReviewRange} />
         </div>
         <ResponsiveContainer width="100%" height={300}>
@@ -178,10 +187,15 @@ export default function DeckDetailCharts({ deck }: { deck: DeckData }) {
       {/* Study Time */}
       <section className="bg-white rounded-2xl shadow p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-800">
-            日別学習時間
-            {hasChildren && <span className="text-sm text-gray-400 font-normal ml-2">(子デッキ別)</span>}
-          </h2>
+          <div>
+            <h2 className="text-lg font-semibold text-gray-800">
+              日別学習時間
+              {hasChildren && <span className="text-sm text-gray-400 font-normal ml-2">(子デッキ別)</span>}
+            </h2>
+            <p className="text-sm text-gray-400 mt-0.5">
+              合計 <span className="font-semibold text-gray-700">{totalMin.toLocaleString()} 分</span>
+            </p>
+          </div>
           <RangeSelector range={timeRange} onChange={setTimeRange} />
         </div>
         <ResponsiveContainer width="100%" height={300}>

@@ -57,10 +57,22 @@ export default function StudyTimeChart({ decks }: Props) {
     return row;
   });
 
+  const totalMin = decks.reduce((sum, deck) => {
+    return sum + deck.dailyStats
+      .filter((s) => !cutoff || s.date >= cutoff)
+      .reduce((s, d) => s + d.studyTimeMs, 0);
+  }, 0);
+  const totalMinRounded = Math.round(totalMin / 60000);
+
   return (
     <section className="bg-white rounded-2xl shadow p-6">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold text-gray-800">日別学習時間</h2>
+        <div>
+          <h2 className="text-lg font-semibold text-gray-800">日別学習時間</h2>
+          <p className="text-sm text-gray-400 mt-0.5">
+            合計 <span className="font-semibold text-gray-700">{totalMinRounded.toLocaleString()} 分</span>
+          </p>
+        </div>
         <div className="flex gap-1">
           {(["7", "30", "all"] as Range[]).map((r) => (
             <button
