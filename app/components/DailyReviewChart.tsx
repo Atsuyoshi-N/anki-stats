@@ -44,10 +44,15 @@ export default function DailyReviewChart({ decks }: Props) {
   }
   const dates = Array.from(dateSet).sort();
 
+  // Only show decks that have reviews in the selected period
+  const activeDecks = decks.filter((deck) =>
+    deck.dailyStats.some((s) => (!cutoff || s.date >= cutoff) && s.reviews > 0)
+  );
+
   // Build chart data: one row per date, one key per deck
   const chartData = dates.map((date) => {
     const row: Record<string, string | number> = { date };
-    for (const deck of decks) {
+    for (const deck of activeDecks) {
       const shortName = deck.name.split("::").pop() ?? deck.name;
       const found = deck.dailyStats.find((s) => s.date === date);
       row[shortName] = found?.reviews ?? 0;
@@ -98,7 +103,7 @@ export default function DailyReviewChart({ decks }: Props) {
           <YAxis tick={{ fontSize: 11 }} />
           <Tooltip content={(props) => <ChartTooltip {...props} unit=" 枚" />} />
           <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
-          {decks.map((deck, i) => {
+          {activeDecks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             return (
               <Bar
@@ -106,7 +111,7 @@ export default function DailyReviewChart({ decks }: Props) {
                 dataKey={shortName}
                 stackId="a"
                 fill={DECK_COLORS[i % DECK_COLORS.length]}
-                radius={i === decks.length - 1 ? [4, 4, 0, 0] : undefined}
+                radius={i === activeDecks.length - 1 ? [4, 4, 0, 0] : undefined}
               />
             );
           })}

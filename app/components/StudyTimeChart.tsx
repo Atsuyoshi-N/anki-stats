@@ -39,8 +39,13 @@ export default function StudyTimeChart({ decks }: Props) {
 
   const cutoff = range === "all" ? "" : subtractDays(Number(range));
 
+  // Only show decks that have study time in the selected period
+  const activeDecks = decks.filter((deck) =>
+    deck.dailyStats.some((s) => (!cutoff || s.date >= cutoff) && s.studyTimeMs > 0)
+  );
+
   const dateSet = new Set<string>();
-  for (const deck of decks) {
+  for (const deck of activeDecks) {
     for (const d of deck.dailyStats) {
       if (!cutoff || d.date >= cutoff) dateSet.add(d.date);
     }
@@ -49,7 +54,7 @@ export default function StudyTimeChart({ decks }: Props) {
 
   const chartData = dates.map((date) => {
     const row: Record<string, string | number> = { date };
-    for (const deck of decks) {
+    for (const deck of activeDecks) {
       const shortName = deck.name.split("::").pop() ?? deck.name;
       const found = deck.dailyStats.find((s) => s.date === date);
       row[shortName] = found ? msToMin(found.studyTimeMs) : 0;
@@ -57,7 +62,7 @@ export default function StudyTimeChart({ decks }: Props) {
     return row;
   });
 
-  const totalMin = decks.reduce((sum, deck) => {
+  const totalMin = activeDecks.reduce((sum, deck) => {
     return sum + deck.dailyStats
       .filter((s) => !cutoff || s.date >= cutoff)
       .reduce((s, d) => s + d.studyTimeMs, 0);
@@ -101,7 +106,7 @@ export default function StudyTimeChart({ decks }: Props) {
           <YAxis tick={{ fontSize: 11 }} unit="分" />
           <Tooltip content={(props) => <ChartTooltip {...props} unit=" 分" />} />
           <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
-          {decks.map((deck, i) => {
+          {activeDecks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             const color = DECK_COLORS[i % DECK_COLORS.length];
             return (

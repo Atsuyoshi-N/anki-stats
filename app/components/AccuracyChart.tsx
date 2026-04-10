@@ -55,15 +55,20 @@ export default function AccuracyChart({ decks }: Props) {
 
   const cutoff = range === "all" ? "" : subtractDays(Number(range));
 
+  // Only show decks that have reviews in the selected period
+  const activeDecks = decks.filter((deck) =>
+    deck.dailyStats.some((s) => (!cutoff || s.date >= cutoff) && s.reviews > 0)
+  );
+
   const dateSet = new Set<string>();
-  for (const deck of decks) {
+  for (const deck of activeDecks) {
     for (const d of deck.dailyStats) {
       if (!cutoff || d.date >= cutoff) dateSet.add(d.date);
     }
   }
   const dates = Array.from(dateSet).sort();
 
-  const maData = decks.map((deck) => ({
+  const maData = activeDecks.map((deck) => ({
     deck,
     ma: movingAverage(deck, dates, 7),
   }));
@@ -119,7 +124,7 @@ export default function AccuracyChart({ decks }: Props) {
             }}
           />
           <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: 12 }} />
-          {decks.map((deck, i) => {
+          {activeDecks.map((deck, i) => {
             const shortName = deck.name.split("::").pop() ?? deck.name;
             return (
               <Line
