@@ -1,0 +1,4 @@
+:HL["/anki-stats/_next/static/chunks/0eb5vix9-i0ng.css","style"]
+:HL["/anki-stats/_next/static/media/797e433ab948586e-s.p.0.q-h669a_dqa.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/anki-stats/_next/static/media/caa3a2e1cccd8315-s.p.16t1db8_9y2o~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"decks","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"c","key":"%E3%83%B4%E3%82%A3%E3%83%8E%E3%83%86%E3%83%A9%E3%82%B9%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"cDFKP8ZfU5M41syWGzAGr"}

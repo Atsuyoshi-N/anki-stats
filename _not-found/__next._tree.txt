@@ -1,2 +1,2 @@
-:HL["/anki-stats/_next/static/chunks/009~8ur2yvu5p.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"D-9QUcrffGbP075RkEjCl"}
+:HL["/anki-stats/_next/static/chunks/0eb5vix9-i0ng.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"cDFKP8ZfU5M41syWGzAGr"}
